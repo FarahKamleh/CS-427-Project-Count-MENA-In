@@ -1,2 +1,2 @@
 # CS-427-Project-Count-MENA-In
- The following project uses a first-person perspective in Virtual Reality (VR) to advocate for the inclusion of Middle Eastern North African (MENA) as a category on the US census and other similar surveys/applications. It simulates obstacles and challenges faced by MENA individuals due to this erasure. This project is configured for the CAVE2 Hyprid Reality Environment.
+ The following project uses a first-person perspective in Virtual Reality (VR) to advocate for the inclusion of Middle Eastern North African (MENA) as a category on the US census and other similar surveys/applications. It simulates obstacles and challenges faced by MENA individuals due to this erasure. This project is configured for the CAVE2 Hybrid Reality Environment.
