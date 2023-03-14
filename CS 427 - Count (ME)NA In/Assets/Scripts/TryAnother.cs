@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class TryAnother : MonoBehaviour
 {
+    // identify the collider
+    Collider boxCollider;
+
+    // try another game object
+    public GameObject tryAnother;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        // fetch the collider
+        boxCollider = GetComponent<Collider>();
     }
 
-    // Update is called once per frame
-    void Update()
+    // if the box collides with another box, trigger
+    private void OnTriggerEnter(Collider other)
     {
-        
+        // make the Try Another text appear
+        tryAnother.SetActive(true);
     }
 }
