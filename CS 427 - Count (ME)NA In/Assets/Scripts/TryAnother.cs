@@ -10,6 +10,9 @@ public class TryAnother : MonoBehaviour
     // try another game object
     public GameObject tryAnother;
 
+    // locked door sound
+    public AudioSource locked;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +25,8 @@ public class TryAnother : MonoBehaviour
     {
         // make the Try Another text appear
         tryAnother.SetActive(true);
+
+        // play the sound
+        locked.Play();
     }
 }
