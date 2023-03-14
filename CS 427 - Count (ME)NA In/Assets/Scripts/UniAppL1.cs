@@ -25,6 +25,14 @@ public class UniAppL1 : MonoBehaviour
     public GameObject command;
     public GameObject raceQ;
 
+    // all other paths
+    public GameObject otherPath;
+    public GameObject scholApp;
+    public GameObject whitePath;
+    public GameObject reportCirc;
+    public GameObject commPath;
+    public GameObject finalCirc;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +55,14 @@ public class UniAppL1 : MonoBehaviour
         tryW.SetActive(false);
         tryHL.SetActive(false);
         tryA.SetActive(false);
+
+        // set paths inactive
+        otherPath.SetActive(false);
+        scholApp.SetActive(false);
+        whitePath.SetActive(false);
+        reportCirc.SetActive(false);
+        commPath.SetActive(false);
+        finalCirc.SetActive(false);
     }
 
     // Update is called once per frame
