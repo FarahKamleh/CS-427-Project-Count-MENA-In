@@ -14803,8 +14803,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7921305, y: 2.4914408, z: 2.347021}
-  m_Center: {x: -0.01013571, y: 1.3704448, z: 0.90893936}
+  m_Size: {x: 2.7921305, y: 2.4914408, z: 3.1509867}
+  m_Center: {x: -0.010135651, y: 1.3704448, z: 0.5069566}
 --- !u!1 &1497706176
 GameObject:
   m_ObjectHideFlags: 0
@@ -20470,6 +20470,10 @@ MonoBehaviour:
   door: {fileID: 2121948268}
   otherPath: {fileID: 2007028074}
   scholCirc: {fileID: 903312564}
+  whitePath: {fileID: 391066317}
+  reportCirc: {fileID: 1218449557}
+  commPath: {fileID: 1404083506}
+  finalCirc: {fileID: 1007571216}
   open: {fileID: 2121948273}
 --- !u!82 &2121948273
 AudioSource:
