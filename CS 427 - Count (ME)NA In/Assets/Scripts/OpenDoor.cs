@@ -42,16 +42,6 @@ public class OpenDoor : MonoBehaviour
         // open door
         door.GetComponent<Animator>().enabled = true;
 
-        // add the path and next circle
-        otherPath.SetActive(true);
-        scholCirc.SetActive(true);
-
-        // FIXME: remove later
-        whitePath.SetActive(true);
-        reportCirc.SetActive(true);
-        commPath.SetActive(true);
-        finalCirc.SetActive(true);
-
         // play sound once
         if (soundFlag == true)
         {
@@ -71,5 +61,18 @@ public class OpenDoor : MonoBehaviour
 
         // play sound
         open.Play();
+
+        // another second delay
+        yield return new WaitForSeconds(1);
+
+        // add the path and next circle
+        otherPath.SetActive(true);
+        scholCirc.SetActive(true);
+
+        // FIXME: remove later
+        whitePath.SetActive(true);
+        reportCirc.SetActive(true);
+        commPath.SetActive(true);
+        finalCirc.SetActive(true);
     }
 }
