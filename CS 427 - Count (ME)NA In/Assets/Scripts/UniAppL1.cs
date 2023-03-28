@@ -36,6 +36,10 @@ public class UniAppL1 : MonoBehaviour
     // spotlight sound
     public AudioSource spotLight;
 
+    // character thoughts
+    public GameObject thoughts1;
+    public GameObject thoughts2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,8 +52,10 @@ public class UniAppL1 : MonoBehaviour
         doorHL.SetActive(false);
         doorA.SetActive(false);
 
-        // set question inactive at start
+        // set question and thoughts inactive at start
         raceQ.SetActive(false);
+        thoughts1.SetActive(false);
+        thoughts2.SetActive(false);
 
         // set the try anothers inactive
         tryBAA.SetActive(false);
@@ -103,5 +109,6 @@ public class UniAppL1 : MonoBehaviour
         doorHL.SetActive(true);
         doorA.SetActive(true);
         raceQ.SetActive(true);
+        thoughts1.SetActive(true);
     }
 }

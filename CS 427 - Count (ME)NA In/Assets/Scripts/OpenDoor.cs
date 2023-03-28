@@ -23,6 +23,10 @@ public class OpenDoor : MonoBehaviour
     // audio
     public AudioSource open;
 
+    // have thoughts disappear and new ones appear
+    public GameObject thoughts1;
+    public GameObject thoughts2;
+
     // flag to ensure sound plays once
     bool soundFlag = true;
 
@@ -68,6 +72,10 @@ public class OpenDoor : MonoBehaviour
         // add the path and next circle
         otherPath.SetActive(true);
         scholCirc.SetActive(true);
+
+        // make thoughts appear and disappear
+        thoughts1.SetActive(false);
+        thoughts2.SetActive(true);
 
         // FIXME: remove later
         whitePath.SetActive(true);
