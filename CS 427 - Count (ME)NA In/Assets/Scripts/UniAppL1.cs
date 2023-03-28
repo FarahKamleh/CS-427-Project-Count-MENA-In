@@ -40,6 +40,9 @@ public class UniAppL1 : MonoBehaviour
     public GameObject thoughts1;
     public GameObject thoughts2;
 
+    // attached words
+    public GameObject word1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -72,6 +75,9 @@ public class UniAppL1 : MonoBehaviour
         reportCirc.SetActive(false);
         commPath.SetActive(false);
         finalCirc.SetActive(false);
+
+        // make sure attached words are not visible
+        word1.SetActive(false);
 
         // make sure spotlight sound is not playing
         spotLight.Stop();
