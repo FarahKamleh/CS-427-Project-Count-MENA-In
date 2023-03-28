@@ -33,6 +33,9 @@ public class UniAppL1 : MonoBehaviour
     public GameObject commPath;
     public GameObject finalCirc;
 
+    // spotlight sound
+    public AudioSource spotLight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +66,9 @@ public class UniAppL1 : MonoBehaviour
         reportCirc.SetActive(false);
         commPath.SetActive(false);
         finalCirc.SetActive(false);
+
+        // make sure spotlight sound is not playing
+        spotLight.Stop();
     }
 
     // Update is called once per frame
@@ -74,16 +80,28 @@ public class UniAppL1 : MonoBehaviour
             // make the command disappear
             command.SetActive(false);
 
-            // make everything else appear except the try anothers
-            doorBAA.SetActive(true);
-            doorAIAN.SetActive(true);
-            doorO.SetActive(true);
-            doorNHOPI.SetActive(true);
-            doorW.SetActive(true);
-            doorHL.SetActive(true);
-            doorA.SetActive(true);
-            raceQ.SetActive(true);
+            // play the spotlight sound
+            spotLight.Play();
+
+            // create a delay before the doors appear
+            StartCoroutine(Delay());
         }
         
+    }
+
+    IEnumerator Delay()
+    {
+        // wait 0.5 seconds
+        yield return new WaitForSeconds(0.5f);
+
+        // make everything else appear except the try anothers
+        doorBAA.SetActive(true);
+        doorAIAN.SetActive(true);
+        doorO.SetActive(true);
+        doorNHOPI.SetActive(true);
+        doorW.SetActive(true);
+        doorHL.SetActive(true);
+        doorA.SetActive(true);
+        raceQ.SetActive(true);
     }
 }
