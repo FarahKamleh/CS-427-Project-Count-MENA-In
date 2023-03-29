@@ -42,6 +42,7 @@ public class UniAppL1 : MonoBehaviour
 
     // attached words
     public GameObject word1;
+    public GameObject word2;
 
     // Start is called before the first frame update
     void Start()
@@ -78,9 +79,13 @@ public class UniAppL1 : MonoBehaviour
 
         // make sure attached words are not visible
         word1.SetActive(false);
+        word2.SetActive(false);
 
         // make sure spotlight sound is not playing
         spotLight.Stop();
+
+        // ensure skybox is bright at start
+        RenderSettings.skybox.SetFloat("_Exposure", 1);
     }
 
     // Update is called once per frame
