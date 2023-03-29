@@ -75,6 +75,23 @@ public class OpenDoor : MonoBehaviour
             // make false
             soundFlag = false;
         }
+    }
+
+    // delay function
+    IEnumerator Delay()
+    {
+        // wait 1 seconds
+        yield return new WaitForSeconds(1);
+
+        // play sound
+        open.Play();
+
+        // another second delay
+        yield return new WaitForSeconds(1);
+
+        // add the path and next circle
+        otherPath.SetActive(true);
+        scholCirc.SetActive(true);
 
         // start with 1 alpha
         Color color1 = flagMaterial1.color;
@@ -108,23 +125,6 @@ public class OpenDoor : MonoBehaviour
         Color color8 = flagMaterial8.color;
         color8.a = 1;
         flagMaterial8.color = color8;
-    }
-
-    // delay function
-    IEnumerator Delay()
-    {
-        // wait 1 seconds
-        yield return new WaitForSeconds(1);
-
-        // play sound
-        open.Play();
-
-        // another second delay
-        yield return new WaitForSeconds(1);
-
-        // add the path and next circle
-        otherPath.SetActive(true);
-        scholCirc.SetActive(true);
 
         // make thoughts appear and disappear
         thoughts1.SetActive(false);
