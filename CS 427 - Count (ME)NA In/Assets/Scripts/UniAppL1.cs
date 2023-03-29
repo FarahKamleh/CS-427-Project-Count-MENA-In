@@ -43,6 +43,8 @@ public class UniAppL1 : MonoBehaviour
     // attached words
     public GameObject word1;
     public GameObject word2;
+    public GameObject word3;
+    public GameObject word4;
 
     // Start is called before the first frame update
     void Start()
@@ -80,6 +82,8 @@ public class UniAppL1 : MonoBehaviour
         // make sure attached words are not visible
         word1.SetActive(false);
         word2.SetActive(false);
+        word3.SetActive(false);
+        word4.SetActive(false);
 
         // make sure spotlight sound is not playing
         spotLight.Stop();
