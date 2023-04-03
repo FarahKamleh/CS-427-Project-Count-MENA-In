@@ -22,6 +22,7 @@ public class OpenDoor : MonoBehaviour
 
     // audio
     public AudioSource open;
+    public AudioSource hBeat;
 
     // have thoughts disappear and new ones appear
     public GameObject thoughts1;
@@ -88,6 +89,10 @@ public class OpenDoor : MonoBehaviour
 
         // another second delay
         yield return new WaitForSeconds(1);
+
+        // heart beat increase by 0.1
+        hBeat.volume = hBeat.volume + 0.1f;
+        hBeat.Play();
 
         // add the path and next circle
         otherPath.SetActive(true);

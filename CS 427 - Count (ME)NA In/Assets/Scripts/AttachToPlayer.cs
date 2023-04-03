@@ -21,6 +21,9 @@ public class AttachToPlayer : MonoBehaviour
     public Material flagMaterial7;
     public Material flagMaterial8;
 
+    // audio
+    public AudioSource hBeat;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +52,9 @@ public class AttachToPlayer : MonoBehaviour
 
         // make word disappear
         word1.SetActive(false);
+
+        // make heart beat louder by 0.1
+        hBeat.volume = hBeat.volume + 0.1f;
 
         // change the opacity of the flags by 0.25
         Color color1 = flagMaterial1.color;
