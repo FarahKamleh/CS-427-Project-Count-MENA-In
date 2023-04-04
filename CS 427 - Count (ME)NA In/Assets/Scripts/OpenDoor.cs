@@ -14,15 +14,12 @@ public class OpenDoor : MonoBehaviour
     public GameObject otherPath;
     public GameObject scholCirc;
 
-    // FIXME: remove this later
-    public GameObject whitePath;
-    public GameObject reportCirc;
-    public GameObject commPath;
-    public GameObject finalCirc;
-
     // audio
     public AudioSource open;
     public AudioSource hBeat;
+
+    // typograohy
+    public GameObject scholQ;
 
     // have thoughts disappear and new ones appear
     public GameObject thoughts1;
@@ -40,6 +37,21 @@ public class OpenDoor : MonoBehaviour
     public Material flagMaterial6;
     public Material flagMaterial7;
     public Material flagMaterial8;
+
+    // door game objects
+    public GameObject doorBAA;
+    public GameObject doorAIAN;
+    public GameObject doorNHOPI;
+    public GameObject doorW;
+    public GameObject doorHL;
+    public GameObject doorA;
+
+    // try another game objects
+    public GameObject tryBAA;
+    public GameObject tryAIAN;
+    public GameObject tryNHOPI;
+    public GameObject tryHL;
+    public GameObject tryA;
 
     // Start is called before the first frame update
     void Start()
@@ -94,9 +106,27 @@ public class OpenDoor : MonoBehaviour
         hBeat.volume = hBeat.volume + 0.1f;
         hBeat.Play();
 
-        // add the path and next circle
+        // add the path and next circle with command
         otherPath.SetActive(true);
         scholCirc.SetActive(true);
+
+        // none of the doors should be visible
+        doorBAA.SetActive(false);
+        doorAIAN.SetActive(false);
+        doorNHOPI.SetActive(false);
+        doorW.SetActive(false);
+        doorHL.SetActive(false);
+        doorA.SetActive(false);
+
+        // set question and thoughts inactive at start
+        scholQ.SetActive(false);
+
+        // set the try anothers inactive
+        tryBAA.SetActive(false);
+        tryAIAN.SetActive(false);
+        tryNHOPI.SetActive(false);
+        tryHL.SetActive(false);
+        tryA.SetActive(false);
 
         // start with 1 alpha
         Color color1 = flagMaterial1.color;
@@ -134,11 +164,5 @@ public class OpenDoor : MonoBehaviour
         // make thoughts appear and disappear
         thoughts1.SetActive(false);
         thoughts2.SetActive(true);
-
-        // FIXME: remove later
-        whitePath.SetActive(true);
-        reportCirc.SetActive(true);
-        commPath.SetActive(true);
-        finalCirc.SetActive(true);
     }
 }
