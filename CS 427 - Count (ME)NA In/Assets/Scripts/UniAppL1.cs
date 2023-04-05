@@ -46,6 +46,9 @@ public class UniAppL1 : MonoBehaviour
     public GameObject word3;
     public GameObject word4;
 
+    // a flag for sound only once
+    bool soundFlag = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -102,7 +105,11 @@ public class UniAppL1 : MonoBehaviour
             command.SetActive(false);
 
             // play the spotlight sound
-            spotLight.Play();
+            if (soundFlag == false)
+            {
+                spotLight.Play();
+                soundFlag = true;
+            }
 
             // create a delay before the doors appear
             StartCoroutine(Delay());
