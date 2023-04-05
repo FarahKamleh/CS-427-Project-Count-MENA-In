@@ -46,6 +46,10 @@ public class UniAppL1 : MonoBehaviour
     public GameObject word2;
     public GameObject word3;
     public GameObject word4;
+    public GameObject word5;
+    public GameObject word6;
+    public GameObject word7;
+    public GameObject word8;
 
     // a flag for sound only once
     bool soundFlag = false;
@@ -89,6 +93,10 @@ public class UniAppL1 : MonoBehaviour
         word2.SetActive(false);
         word3.SetActive(false);
         word4.SetActive(false);
+        word5.SetActive(false);
+        word6.SetActive(false);
+        word7.SetActive(false);
+        word8.SetActive(false);
 
         // make sure spotlight sound is not playing
         spotLight.Stop();
