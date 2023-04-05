@@ -39,6 +39,7 @@ public class UniAppL1 : MonoBehaviour
     // character thoughts
     public GameObject thoughts1;
     public GameObject thoughts2;
+    public GameObject thoughts3;
 
     // attached words
     public GameObject word1;
@@ -65,6 +66,7 @@ public class UniAppL1 : MonoBehaviour
         raceQ.SetActive(false);
         thoughts1.SetActive(false);
         thoughts2.SetActive(false);
+        thoughts3.SetActive(false);
 
         // set the try anothers inactive
         tryBAA.SetActive(false);
@@ -108,7 +110,6 @@ public class UniAppL1 : MonoBehaviour
             if (soundFlag == false)
             {
                 spotLight.Play();
-                soundFlag = true;
             }
 
             // create a delay before the doors appear
@@ -131,6 +132,10 @@ public class UniAppL1 : MonoBehaviour
         doorHL.SetActive(true);
         doorA.SetActive(true);
         raceQ.SetActive(true);
-        thoughts1.SetActive(true);
+        if (soundFlag == false)
+        {
+            thoughts1.SetActive(true);
+            soundFlag = true;
+        }
     }
 }
