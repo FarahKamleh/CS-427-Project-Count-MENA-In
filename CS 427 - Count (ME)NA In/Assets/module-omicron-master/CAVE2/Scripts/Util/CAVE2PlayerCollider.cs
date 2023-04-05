@@ -88,6 +88,26 @@ public class CAVE2PlayerCollider : MonoBehaviour {
             playerHeadPosition.y = 0.1f;
         }
 
+        float x_coord = -0.1f;
+        float y_coord = 0.5f;
+        float z_coord = -0.3f;
+        if (transform.position.z > 18)
+        {
+            x_coord = 22;
+            y_coord = 0.5f;
+            z_coord = 23;
+        }
+        if (transform.position.z > 47)
+        {
+            x_coord = 3;
+            y_coord = 0.5f;
+            z_coord = 55;
+        }
+        if (transform.position.y < -0.5f)
+        {
+            transform.position = new Vector3(x_coord, y_coord, z_coord);
+        }
+
         bodyCollider.height = playerHeadPosition.y;
         bodyCollider.center = new Vector3(playerHeadPosition.x, bodyCollider.height / 2.0f, playerHeadPosition.z);
     }
