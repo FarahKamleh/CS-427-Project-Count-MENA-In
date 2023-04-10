@@ -3814,6 +3814,115 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012607288206, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012306737034, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: fadeAfterTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012306737034, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: fadeAfterDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012306737034, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: minFadingDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000014254841768, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000011186398700, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011952582294, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: Use the analog stick to move. Press the L2 button to begin applications
+        and reports when instructed. Press and release the cross button (X) to grab
+        and toss words. Press the circle button (O) to open the standard menu and
+        make selections. Use the DPad to navigate the menu.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010683909002, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: 'The premise of the project is that the player, a Middle Eastern North
+        African (MENA) student, is applying to a university as well as a minority-specific
+        scholarship that they are qualified for based on the required criteria. As
+        they do so, they are asked to provide the race that they identify with, only
+        to be surrounded by options that, although many, do not include them.
+
+
+        Throughout, the thoughts of the student are present above their head, expressing
+        how each selection makes them feel. In addition, derogatory words associated
+        with each selection follow them wherever they go as though they are inescapable.
+        The further they walk along the path, the more they witness and experience
+        their own erasure.
+
+
+        When they begin to feel that inclusion is an impossibility, they suddenly
+        find solidarity among community members. They too agree that the U.S. Census
+        and other similar surveys must count MENA in!
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011111918770, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Count (ME)NA In intends to advocate for the inclusion of Middle Eastern
+        North African (MENA) as a category on the U.S. Census and similar surveys
+        that take into account race and ethnicity. To do so, it demonstrates, from
+        a first-person perspective using Virtual Reality (VR), a few of the obstacles
+        and challenges faced by MENA individuals as a result of this erasure.
+
+
+        In most cases, the only options available are "Other" and "White". The former
+        reveals that MENA individuals are an afterthought while the latter contributes
+        to the erasure of their culture and history. In addition, when findings are
+        made after such data is collected, they fail to highlight issues that specifically
+        target MENA communities which results in a lack of accommodations and resources
+        that are, again, specific to them.
+
+
+        Even in cases such as affirmative action which aims to increase opportunities
+        for underrepresented demographics, MENA individuals are forgotten by the policy
+        and do not benefit although they too are underrepresented racial minorities.
+        In order to create change, this project not only spreads awareness about a
+        lesser acknowledged form of descrimination, but also proposes "community"
+        as a potential solution, as it is through the activism of communities that
+        most change occurs.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011641407824, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: 'CS 427 - Creative Coding
+
+        Spring 2023
+
+        University of Illinois at Chicago'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010541511360, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: Count (ME)NA In
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011468825520, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Farah Kamleh
+
+        Azka Mazher
+
+        Saksham Ayush'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
 --- !u!1 &392982960 stripped
