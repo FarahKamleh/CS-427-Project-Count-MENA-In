@@ -53,6 +53,13 @@ public class ProjectDescriptionCanvasUI : MonoBehaviour
             }
 
         }
+
+        // if L2 or the up button is pressed, fade the canvas
+        if ((CAVE2.GetButtonDown(CAVE2.Button.Button7)) || (Input.GetKeyDown(KeyCode.UpArrow)))
+        {
+            // fade the canvas
+            DisableDescription();
+        }
     }
 
     public void EnableDescription()
