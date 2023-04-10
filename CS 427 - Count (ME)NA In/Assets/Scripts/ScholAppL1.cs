@@ -42,8 +42,8 @@ public class ScholAppL1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if user presses L1 on wand or up on keyboard
-        if ((CAVE2.GetButtonDown(CAVE2.Button.Button5)) || (Input.GetKeyDown(KeyCode.UpArrow)))
+        // if user presses L2 on wand or up on keyboard
+        if ((CAVE2.GetButtonDown(CAVE2.Button.Button7)) || (Input.GetKeyDown(KeyCode.UpArrow)))
         {
             // make the command disappear
             command.SetActive(false);
