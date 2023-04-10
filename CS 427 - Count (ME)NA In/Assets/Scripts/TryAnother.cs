@@ -23,10 +23,19 @@ public class TryAnother : MonoBehaviour
     // if the box collides with another box, trigger
     private void OnTriggerEnter(Collider other)
     {
-        // make the Try Another text appear
-        tryAnother.SetActive(true);
-
         // play the sound
         locked.Play();
+
+        // delay the try another
+        StartCoroutine(Delay());
+    }
+
+    IEnumerator Delay()
+    {
+        // wait 1 seconds
+        yield return new WaitForSeconds(2);
+
+        // make the Try Another text appear
+        tryAnother.SetActive(true);
     }
 }
