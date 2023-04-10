@@ -52,7 +52,6 @@ public class ScholAppL1 : MonoBehaviour
             if (soundFlag == false)
             {
                 spotLight.Play();
-                soundFlag = true;
             }
 
             // create a delay before the doors appear
@@ -73,7 +72,13 @@ public class ScholAppL1 : MonoBehaviour
         doorHL.SetActive(true);
         doorA.SetActive(true);
         raceQ.SetActive(true);
-        thoughts2.SetActive(false);
-        thoughts3.SetActive(true);
+
+        // ensure thoughts appear only once
+        if (soundFlag == false)
+        {
+            thoughts2.SetActive(false);
+            thoughts3.SetActive(true);
+            soundFlag = true;
+        }
     }
 }
