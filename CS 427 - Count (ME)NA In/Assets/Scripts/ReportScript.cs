@@ -19,14 +19,26 @@ public class ReportScript : MonoBehaviour
     public GameObject thoughts6;
 
     // FIXME: remove
-    public GameObject comPath;
-    public GameObject comCirc;
+    // public GameObject comPath;
+    // public GameObject comCirc;
+
+    // wall
+    public GameObject powerless;
+    public GameObject hopeless;
+    public GameObject helpless;
+    public GameObject alone;
 
     // Start is called before the first frame update
     void Start()
     {
         // ensure cannot is inactive
         cannot.SetActive(false);
+
+        // set wall inactive
+        powerless.SetActive(false);
+        hopeless.SetActive(false);
+        helpless.SetActive(false);
+        alone.SetActive(false);
     }
 
     // Update is called once per frame
@@ -64,8 +76,25 @@ public class ReportScript : MonoBehaviour
         thoughts5.SetActive(false);
         thoughts6.SetActive(true);
 
+        // wait until removal
+        yield return new WaitForSeconds(6);
+
+        // remove response
+        cannot.SetActive(false);
+        yield return new WaitForSeconds(1);
+
+        // make wall appear
+        powerless.SetActive(true);
+        yield return new WaitForSeconds(1);
+        hopeless.SetActive(true);
+        yield return new WaitForSeconds(1);
+        helpless.SetActive(true);
+        yield return new WaitForSeconds(1);
+        alone.SetActive(true);
+
+
         // FIXME: remove
-        comPath.SetActive(true);
-        comCirc.SetActive(true);
+        //comPath.SetActive(true);
+        //comCirc.SetActive(true);
     }
 }
