@@ -18,10 +18,14 @@ public class OpenDoor2 : MonoBehaviour
     // audio
     public AudioSource open;
     public AudioSource hBeat;
+    public AudioSource error;
 
     // have thoughts disappear and new ones appear
     public GameObject thoughts3;
     public GameObject thoughts4;
+
+    // denial
+    public GameObject denial;
 
     // flag to ensure sound plays once
     bool soundFlag = true;
@@ -93,6 +97,9 @@ public class OpenDoor2 : MonoBehaviour
         whitePath.SetActive(true);
         reportCirc.SetActive(true);
 
+        // make sure denial is inactive
+        denial.SetActive(false);
+
         // none of the doors should be visible
         door.SetActive(false);
 
@@ -132,5 +139,14 @@ public class OpenDoor2 : MonoBehaviour
         // make thoughts appear and disappear
         thoughts3.SetActive(false);
         thoughts4.SetActive(true);
+
+        // play the error sound
+        error.Play();
+
+        // wait one second
+        yield return new WaitForSeconds(1);
+
+        // make denial appear in synch with error
+        denial.SetActive(true);
     }
 }
