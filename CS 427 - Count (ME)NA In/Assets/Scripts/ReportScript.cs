@@ -6,7 +6,7 @@ public class ReportScript : MonoBehaviour
 {
     // command and reply
     public GameObject report;
-    //public GameObject cannot;
+    public GameObject cannot;
 
     // buzzer audio
     public AudioSource buzzer;
@@ -15,7 +15,7 @@ public class ReportScript : MonoBehaviour
     void Start()
     {
         // ensure cannot is inactive
-        //cannot.SetActive(false);
+        cannot.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,14 +26,24 @@ public class ReportScript : MonoBehaviour
         {
             // remove the command and replace with cant report
             report.SetActive(false);
-            //cannot.SetActive(true);
 
             // play the buzzer sound
             buzzer.Play();
 
+            // delay in appearance
+            StartCoroutine(Delay());
+
             // set skybox exposure to 0
             RenderSettings.skybox.SetFloat("_Exposure", 0);
         }
-        
+    }
+
+    IEnumerator Delay()
+    {
+        // wait 1 seconds
+        yield return new WaitForSeconds(1);
+
+        // make message appear delayed
+        cannot.SetActive(true);
     }
 }
