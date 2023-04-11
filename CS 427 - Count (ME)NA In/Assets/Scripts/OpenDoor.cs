@@ -17,6 +17,7 @@ public class OpenDoor : MonoBehaviour
     // audio
     public AudioSource open;
     public AudioSource hBeat;
+    public AudioSource eerie;
 
     // typograohy
     public GameObject scholQ;
@@ -101,6 +102,9 @@ public class OpenDoor : MonoBehaviour
 
         // another second delay
         yield return new WaitForSeconds(1);
+
+        // play eerie music
+        eerie.Play();
 
         // heart beat increase by 0.1
         hBeat.volume = hBeat.volume + 0.1f;

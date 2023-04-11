@@ -41,6 +41,7 @@ public class UniAppL1 : MonoBehaviour
     public GameObject thoughts2;
     public GameObject thoughts3;
     public GameObject thoughts4;
+    public GameObject thoughts5;
 
     // attached words
     public GameObject word1;
@@ -73,6 +74,7 @@ public class UniAppL1 : MonoBehaviour
         thoughts2.SetActive(false);
         thoughts3.SetActive(false);
         thoughts4.SetActive(false);
+        thoughts5.SetActive(false);
 
         // set the try anothers inactive
         tryBAA.SetActive(false);
