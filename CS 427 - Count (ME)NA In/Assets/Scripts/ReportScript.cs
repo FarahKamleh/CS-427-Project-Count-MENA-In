@@ -18,6 +18,10 @@ public class ReportScript : MonoBehaviour
     public GameObject thoughts5;
     public GameObject thoughts6;
 
+    // FIXME: remove
+    public GameObject comPath;
+    public GameObject comCirc;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,5 +63,9 @@ public class ReportScript : MonoBehaviour
         // change thoughts
         thoughts5.SetActive(false);
         thoughts6.SetActive(true);
+
+        // FIXME: remove
+        comPath.SetActive(true);
+        comCirc.SetActive(true);
     }
 }
