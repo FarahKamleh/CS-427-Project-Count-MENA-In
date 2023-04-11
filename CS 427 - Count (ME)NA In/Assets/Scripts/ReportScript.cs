@@ -14,6 +14,10 @@ public class ReportScript : MonoBehaviour
     // sound flag
     bool soundFlag = false;
 
+    // thoughts
+    public GameObject thoughts5;
+    public GameObject thoughts6;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,5 +55,9 @@ public class ReportScript : MonoBehaviour
 
         // make message appear delayed
         cannot.SetActive(true);
+
+        // change thoughts
+        thoughts5.SetActive(false);
+        thoughts6.SetActive(true);
     }
 }
