@@ -746,9 +746,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c62a592d6c73a7a45a84a69ccf49b5c0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.09
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -4316,7 +4316,7 @@ PrefabInstance:
         for underrepresented demographics, MENA individuals are forgotten by the policy
         and do not benefit although they too are underrepresented racial minorities.
         In order to create change, this project not only spreads awareness about a
-        lesser acknowledged form of descrimination, but also proposes "community"
+        lesser acknowledged form of discrimination, but also proposes "community"
         as a potential solution, as it is through the activism of communities that
         most change occurs.'
       objectReference: {fileID: 0}
@@ -23151,7 +23151,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -23776,7 +23776,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3009aa25e1c529645bd6515b830369ee, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0

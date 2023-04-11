@@ -11,6 +11,9 @@ public class ReportScript : MonoBehaviour
     // buzzer audio
     public AudioSource buzzer;
 
+    // sound flag
+    bool soundFlag = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +31,10 @@ public class ReportScript : MonoBehaviour
             report.SetActive(false);
 
             // play the buzzer sound
-            buzzer.Play();
+            if (soundFlag == false) {
+                buzzer.Play();
+                soundFlag = true;
+            }
 
             // delay in appearance
             StartCoroutine(Delay());
