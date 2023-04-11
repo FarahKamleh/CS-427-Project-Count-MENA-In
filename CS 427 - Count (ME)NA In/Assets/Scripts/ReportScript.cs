@@ -28,6 +28,9 @@ public class ReportScript : MonoBehaviour
     public GameObject helpless;
     public GameObject alone;
 
+    // other typography
+    public GameObject toss;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +42,9 @@ public class ReportScript : MonoBehaviour
         hopeless.SetActive(false);
         helpless.SetActive(false);
         alone.SetActive(false);
+
+        // inactive
+        toss.SetActive(false);
     }
 
     // Update is called once per frame
@@ -91,6 +97,9 @@ public class ReportScript : MonoBehaviour
         helpless.SetActive(true);
         yield return new WaitForSeconds(1);
         alone.SetActive(true);
+
+        // command to toss words
+        toss.SetActive(true);
 
 
         // FIXME: remove
