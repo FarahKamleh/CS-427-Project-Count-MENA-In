@@ -75,11 +75,15 @@ public class ReportScript : MonoBehaviour
             // play the buzzer sound
             if (soundFlag == false) {
                 buzzer.Play();
+
                 // delay in appearance
                 StartCoroutine(Delay());
 
                 // set skybox exposure to 0
                 RenderSettings.skybox.SetFloat("_Exposure", 0);
+
+                // make sure only happens once
+                soundFlag = true;
             }
 
         }
@@ -152,6 +156,5 @@ public class ReportScript : MonoBehaviour
 
         // play rooting audio
 
-        soundFlag = true;
     }
 }
