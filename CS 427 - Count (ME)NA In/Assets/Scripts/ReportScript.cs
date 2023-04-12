@@ -11,16 +11,16 @@ public class ReportScript : MonoBehaviour
     // buzzer audio
     public AudioSource buzzer;
 
+    // audio
+    public AudioSource heart;
+    public AudioSource eerie;
+
     // sound flag
     bool soundFlag = false;
 
     // thoughts
     public GameObject thoughts5;
     public GameObject thoughts6;
-
-    // FIXME: remove
-    public GameObject comPath;
-    public GameObject comCirc;
 
     // wall
     public GameObject powerless;
@@ -30,6 +30,15 @@ public class ReportScript : MonoBehaviour
 
     // other typography
     public GameObject toss;
+    public GameObject beenThere;
+    public GameObject feel;
+    public GameObject happened;
+    public GameObject relate;
+    public GameObject same;
+    public GameObject notAlone;
+
+    // door
+    public GameObject theDoor;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +54,13 @@ public class ReportScript : MonoBehaviour
 
         // inactive
         toss.SetActive(false);
+        beenThere.SetActive(false);
+        feel.SetActive(false);
+        happened.SetActive(false);
+        relate.SetActive(false);
+        same.SetActive(false);
+        notAlone.SetActive(false);
+        theDoor.SetActive(false);
     }
 
     // Update is called once per frame
@@ -59,14 +75,19 @@ public class ReportScript : MonoBehaviour
             // play the buzzer sound
             if (soundFlag == false) {
                 buzzer.Play();
-                soundFlag = true;
+                // delay in appearance
+                StartCoroutine(Delay());
+
+                // set skybox exposure to 0
+                RenderSettings.skybox.SetFloat("_Exposure", 0);
             }
 
-            // delay in appearance
-            StartCoroutine(Delay());
+        }
 
-            // set skybox exposure to 0
-            RenderSettings.skybox.SetFloat("_Exposure", 0);
+        // backup for door
+        if ((soundFlag == true) && (CAVE2.GetButtonDown(CAVE2.Button.Button5)) || (Input.GetKeyDown(KeyCode.DownArrow)))
+        {
+            theDoor.SetActive(true);
         }
     }
 
@@ -85,7 +106,8 @@ public class ReportScript : MonoBehaviour
         // wait until removal
         yield return new WaitForSeconds(6);
 
-        // remove response
+        // remove response and thoughts
+        thoughts6.SetActive(false);
         cannot.SetActive(false);
         yield return new WaitForSeconds(1);
 
@@ -98,12 +120,38 @@ public class ReportScript : MonoBehaviour
         yield return new WaitForSeconds(1);
         alone.SetActive(true);
 
+        // let hopeful music play
+        eerie.Stop();
+        yield return new WaitForSeconds(1);
+        heart.Stop();
+        yield return new WaitForSeconds(1);
+
+        // one by one supporting words appear
+        yield return new WaitForSeconds(3);
+        beenThere.SetActive(true);
+        RenderSettings.skybox.SetFloat("_Exposure", (RenderSettings.skybox.GetFloat("_Exposure") + 0.15f));
+        yield return new WaitForSeconds(3);
+        feel.SetActive(true);
+        RenderSettings.skybox.SetFloat("_Exposure", (RenderSettings.skybox.GetFloat("_Exposure") + 0.15f));
+        yield return new WaitForSeconds(3);
+        happened.SetActive(true);
+        RenderSettings.skybox.SetFloat("_Exposure", (RenderSettings.skybox.GetFloat("_Exposure") + 0.15f));
+        yield return new WaitForSeconds(3);
+        relate.SetActive(true);
+        RenderSettings.skybox.SetFloat("_Exposure", (RenderSettings.skybox.GetFloat("_Exposure") + 0.15f));
+        yield return new WaitForSeconds(3);
+        same.SetActive(true);
+        RenderSettings.skybox.SetFloat("_Exposure", (RenderSettings.skybox.GetFloat("_Exposure") + 0.15f));
+        yield return new WaitForSeconds(3);
+        notAlone.SetActive(true);
+        RenderSettings.skybox.SetFloat("_Exposure", (RenderSettings.skybox.GetFloat("_Exposure") + 0.15f));
+
         // command to toss words
+        yield return new WaitForSeconds(3);
         toss.SetActive(true);
 
+        // play rooting audio
 
-        // FIXME: remove
-        comPath.SetActive(true);
-        comCirc.SetActive(true);
+        soundFlag = true;
     }
 }
