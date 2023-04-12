@@ -10,6 +10,8 @@ public class ReportScript : MonoBehaviour
 
     // buzzer audio
     public AudioSource buzzer;
+    public AudioSource appear;
+    public AudioSource hope;
 
     // audio
     public AudioSource heart;
@@ -116,19 +118,29 @@ public class ReportScript : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         // make wall appear
+        appear.Play();
+        yield return new WaitForSeconds(0.5f);
         powerless.SetActive(true);
         yield return new WaitForSeconds(1);
+        appear.Play();
+        yield return new WaitForSeconds(0.5f);
         hopeless.SetActive(true);
         yield return new WaitForSeconds(1);
+        appear.Play();
+        yield return new WaitForSeconds(0.5f);
         helpless.SetActive(true);
         yield return new WaitForSeconds(1);
+        appear.Play();
+        yield return new WaitForSeconds(0.5f);
         alone.SetActive(true);
+        
 
         // let hopeful music play
         eerie.Stop();
         yield return new WaitForSeconds(1);
         heart.Stop();
         yield return new WaitForSeconds(1);
+        hope.Play();
 
         // one by one supporting words appear
         yield return new WaitForSeconds(3);

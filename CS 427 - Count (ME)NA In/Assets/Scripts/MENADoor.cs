@@ -67,7 +67,19 @@ public class MENADoor : MonoBehaviour
         RenderSettings.skybox.SetFloat("_Exposure", 1);
 
         // start crowd
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.2f);
         crowd.Play();
+
+        // volume down
+        yield return new WaitForSeconds(1);
+        crowd.volume = 0.075f;
+        yield return new WaitForSeconds(1);
+        crowd.volume = 0.05f;
+        yield return new WaitForSeconds(1);
+        crowd.volume = 0.025f;
+        yield return new WaitForSeconds(1);
+        crowd.volume = 0;
+
+
     }
 }

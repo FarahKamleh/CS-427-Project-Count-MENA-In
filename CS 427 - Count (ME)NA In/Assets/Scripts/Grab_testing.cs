@@ -4,6 +4,10 @@ using System.Collections;
 public class Grab_testing : MonoBehaviour
 {
     public GameObject theDoor;
+
+    bool flag = false;
+
+    public AudioSource fall;
     
     public GameObject word1;
     public GameObject word2;
@@ -113,6 +117,13 @@ public class Grab_testing : MonoBehaviour
             rb2.useGravity = true;
             rb3.useGravity = true;
             rb4.useGravity = true;
+
+            if (flag == false)
+            {
+                // fall sound
+                fall.Play();
+                flag = true;
+            }
 
             // make door appear
             theDoor.SetActive(true);
