@@ -19,8 +19,8 @@ public class ReportScript : MonoBehaviour
     public GameObject thoughts6;
 
     // FIXME: remove
-    // public GameObject comPath;
-    // public GameObject comCirc;
+    public GameObject comPath;
+    public GameObject comCirc;
 
     // wall
     public GameObject powerless;
@@ -103,7 +103,7 @@ public class ReportScript : MonoBehaviour
 
 
         // FIXME: remove
-        //comPath.SetActive(true);
-        //comCirc.SetActive(true);
+        comPath.SetActive(true);
+        comCirc.SetActive(true);
     }
 }
