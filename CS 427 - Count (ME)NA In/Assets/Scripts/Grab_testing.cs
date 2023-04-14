@@ -43,6 +43,8 @@ public class Grab_testing : MonoBehaviour
     Vector3 word7_pos;
     Vector3 word8_pos;
 
+    public GameObject toss;
+
     new Rigidbody rb1;
     new Rigidbody rb2;
     new Rigidbody rb3;
@@ -127,6 +129,9 @@ public class Grab_testing : MonoBehaviour
 
             // make door appear
             theDoor.SetActive(true);
+
+            // make tossing command disappear
+            toss.SetActive(false);
 
         }
 

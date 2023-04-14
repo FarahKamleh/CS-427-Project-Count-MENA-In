@@ -1208,6 +1208,7 @@ MonoBehaviour:
   fall_word2: {fileID: 1971803139}
   fall_word3: {fileID: 429647096}
   fall_word4: {fileID: 778144677}
+  toss: {fileID: 90105415}
 --- !u!1 &90124581
 GameObject:
   m_ObjectHideFlags: 0
