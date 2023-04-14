@@ -89,12 +89,6 @@ public class ReportScript : MonoBehaviour
             }
 
         }
-
-        // backup for door
-        if ((soundFlag == true) && (CAVE2.GetButtonDown(CAVE2.Button.Button5)) || (Input.GetKeyDown(KeyCode.DownArrow)))
-        {
-            theDoor.SetActive(true);
-        }
     }
 
     IEnumerator Delay()
